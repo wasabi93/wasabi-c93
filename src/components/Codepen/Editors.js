@@ -1,9 +1,7 @@
 import React from "react";
-import AceEditor from 'react-ace'
-import "ace-builds/src-noconflict/mode-javascript";
-import "ace-builds/src-noconflict/mode-html";
-import "ace-builds/src-noconflict/mode-css";
-import "ace-builds/src-noconflict/mode-python";
+import dynamic from 'next/dynamic'
+
+const AceEditor = dynamic(() => import('react-ace'),{ ssr: false });
 
 import home from "../../styles/home.module.sass";
 
