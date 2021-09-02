@@ -1,0 +1,45 @@
+@media only screen and ( max-width: 767px )
+    header
+        padding: 1vw 3vw
+        grid-column: 1/5
+        background-color: #a0da7f
+        display: flex
+        justify-content: space-between
+        .dropdown
+            position: relative
+            display: inline-block
+            .buttonMenu
+                border: none
+                background: none
+            .dropdownContent
+                display: none
+                position: absolute
+                right: 0%
+                z-index: 1
+                min-width: 160px
+                background-color: white
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2)
+                a
+                    display: block
+                    padding: 12px 16px
+                    color: black
+                    &:hover
+                        background-color: #ddd
+            &:hover
+                .dropdownContent
+                    display: block
+                .buttonMenu
+                    background-color: #ddd
+
+@media only screen and ( min-width: 768px )
+    header
+        padding: 1vw 10vw
+        grid-column: 1/13
+        background-color: #a0da7f
+        display: flex
+        justify-content: space-between
+        .buttonMenu
+            display: none
+        ul li
+            display: inline
+            padding: 1vw 3vw
