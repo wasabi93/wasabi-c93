@@ -5,40 +5,43 @@ main
         min-height: 100vh
         display: grid
         grid-template-rows: auto auto
-        background: #0a3f7c
+        background-color: #204056
         .nameImg
             display: grid
-            grid-template-columns: minmax(25vw, 35%) 1fr
+            grid-template-columns: minmax(30vw, 35%) 1fr
             .name
-                padding-left: 10%
-                padding-top: 20%
-                h2
-                    color: #f58a07
-                    font-size: 2.75em
-                    line-height: 2
-                    letter-spacing: .05em
-                h1
-                    color: white
-                    font-size: 3.75em
-                    line-height: 1
-                    letter-spacing: .1em
-                    font-family: Oswald,sans-serif
-                p
-                    color: white
-                    font-size: 1.5em
-                    line-height: 2
+                display: grid
+                place-items: center
+                .borderName
+                    border-left: 4px solid white
+                    padding-left: 1em
+                    h2
+                        color: white
+                        font-size: 2.75em
+                        line-height: 2
+                        letter-spacing: .05em
+                    h1
+                        color: #f67e7e
+                        font-size: 3.75em
+                        line-height: 1
+                        letter-spacing: .1em
+                        font-family: Oswald,sans-serif
+                    p
+                        color: white
+                        font-size: 1.5em
+                        line-height: 2
             .Image
                 padding-top: 5vh
                 padding-left: 10vh
                 max-width: 94%
                 .avatar
-                    border-radius: 5%
+                    border-radius: 20%
         .introduce
             padding: 5%
             .introDetails
-                display: grid
-                place-items: center
                 .introContainer
+                    a
+                        color: yellow
                     h1
                         color: #faad4e
                         font-size: 3.5em
@@ -47,11 +50,14 @@ main
                     p
                         font-size: 1.5em
                 .introSkills
-                    width: 100%
+                    width: 40%
+                    float: left
                     h1
                         color: #faad4e
                         font-size: 3.5em
                         line-height: 1
                         letter-spacing: .05em
-                    p
-                        font-size: 1.5em
+                    .skillsRating
+                        li
+                            display: flex
+                            justify-content: space-between

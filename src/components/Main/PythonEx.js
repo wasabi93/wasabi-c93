@@ -1,7 +1,7 @@
 import React from 'react'
 
 import home from "../../styles/home.module.sass";
-import Ex from '../OneLineBody/Ex/Ex'
+import ExPy from '../OneLineBody/ExPy'
 
 export default function PythonEx() {
     const js1 = {
@@ -12,7 +12,10 @@ export default function PythonEx() {
     }
     return (
         <main>
-            <Ex ex={js1} details={details}/>
+            <div className={home.exampleContainer}>
+                <h1 className={home.heading}>Python</h1>
+                <ExPy ex={js1} details={details}/>
+            </div>
         </main>
     )
 }

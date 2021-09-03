@@ -12,7 +12,7 @@ export default function Header() {
       <div>
         <Link href="/">
           <a>
-            <span>Logo</span>
+            <span className={home.logoFont}>Logo</span>
           </a>
         </Link>
       </div>
@@ -24,22 +24,22 @@ export default function Header() {
           <ul>
             <li>
               <Link href="/" replace>
-                <a>Home</a>
+                <a href='/'>Home</a>
               </Link>
             </li>
             <li>
               <Link href="/oneLine" replace>
-                <a>1-Line Layouts</a>
+                <a href='oneLine'>1-Line Layouts</a>
               </Link>
             </li>
             <li>
               <Link href="/javascriptEx">
-                <a>Javascript</a>
+                <a href='javascriptEx'>Javascript</a>
               </Link>
             </li>
             <li>
               <Link href="pythonEx">
-                <a>Python</a>
+                <a href='pythonEx'>Python</a>
               </Link>
             </li>
             <li>

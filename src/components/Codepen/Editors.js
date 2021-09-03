@@ -1,7 +1,21 @@
 import React from "react";
 import dynamic from 'next/dynamic'
 
-const AceEditor = dynamic(() => import('react-ace'),{ ssr: false });
+const AceEditor = dynamic( 
+  async () => {
+    const ace = await import('react-ace');
+    require('ace-builds/src-min-noconflict/mode-css')
+    require('ace-builds/src-min-noconflict/mode-html')
+    require('ace-builds/src-min-noconflict/mode-python')
+    require('ace-builds/src-min-noconflict/mode-javascript')
+    return ace;
+}, {
+  loading: () => (
+    <>Loading...</>
+  ),
+  ssr: false,
+}
+)
 
 import home from "../../styles/home.module.sass";
 
@@ -25,10 +39,8 @@ const Editor = ({ mode, title, onChange, value }) => {
   
   return (
     <div className={home.editorContainer}>
-      <div className={home.editorTitle}>{title}</div>
       <AceEditor
         mode={mode}
-        name={title}
         fontSize={18}
         width={"100%"}
         showPrintMargin={true}

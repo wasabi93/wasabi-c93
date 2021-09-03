@@ -1,7 +1,7 @@
 import React from 'react'
 
 import home from "../../styles/home.module.sass";
-import Ex from '../OneLineBody/Ex/Ex'
+import ExJs from '../OneLineBody/ExJs'
 
 export default function JavascriptEx() {
     const js1 = {
@@ -12,7 +12,10 @@ export default function JavascriptEx() {
     }
     return (
         <main>
-            <Ex ex={js1} details={details}/>
+            <div className={home.exampleContainer}>
+                <h1 className={home.heading}>Javascript</h1>
+                <ExJs ex={js1} details={details}/>
+            </div>
         </main>
     )
 }
