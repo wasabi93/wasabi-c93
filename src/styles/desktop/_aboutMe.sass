@@ -1,63 +1,115 @@
 main
     grid-column: 1/13
     .about
-        color: white
         min-height: 100vh
         display: grid
         grid-template-rows: auto auto
-        background-color: #204056
         .nameImg
             display: grid
-            grid-template-columns: minmax(30vw, 35%) 1fr
+            grid-template-columns: 1fr 1fr
+            background-color: #3E3E3E
+            color: white
             .name
-                display: grid
-                place-items: center
+                display: flex
+                justify-content: flex-end
+                align-items: center
+                padding-right: 1em
                 .borderName
-                    border-left: 4px solid white
-                    padding-left: 1em
                     h2
-                        color: white
-                        font-size: 2.75em
-                        line-height: 2
-                        letter-spacing: .05em
+                        color: #FFFFF
+                        font-size: 12vh
+                        font-family: Knewave
+                        text-align: left
                     h1
-                        color: #f67e7e
-                        font-size: 3.75em
-                        line-height: 1
-                        letter-spacing: .1em
-                        font-family: Oswald,sans-serif
-                    p
-                        color: white
-                        font-size: 1.5em
-                        line-height: 2
+                        color: #9AB460
+                        font-size: 14vh
+                        font-family: Righteous
+                        text-align: left
+                        line-height: 0.7
+                    .div1
+                        width: 100%
+                        display: flex
+                        justify-content: flex-end
+                        .p1
+                            font-family: Knewave
+                            font-size: 14vh
+                        .p2
+                            font-family: Urbanist
+                            font-size: 7vh
+                            padding-left: 2vh
             .Image
-                padding-top: 5vh
-                padding-left: 10vh
-                max-width: 94%
-                .avatar
-                    border-radius: 20%
+                padding: 3em 8em 3em 2em
+                width: 90%
         .introduce
+            background-color: white
+            color: #3E3E3E
             padding: 5%
-            .introDetails
-                .introContainer
-                    a
-                        color: yellow
-                    h1
-                        color: #faad4e
-                        font-size: 3.5em
-                        line-height: 1
-                        letter-spacing: .05em
+            .introContainer
+                display: grid
+                grid-template-rows: auto 1fr
+                .introHeader
+                    position: relative
+                    div
+                        display: grid
+                        grid-template-columns: minmax(150px, 40%) 1fr
+                        position: relative
+                        .introHeaderImage
+                            height: 25vh
+                            posistion: absolute
+                            left: 75%
+                            top: -65%
+                        h1
+                            font-family: Knewave
+                            font-size: 3em
                     p
+                        font-family: Urbanist
+                        text-align: center
                         font-size: 1.5em
-                .introSkills
-                    width: 40%
-                    float: left
-                    h1
-                        color: #faad4e
-                        font-size: 3.5em
-                        line-height: 1
-                        letter-spacing: .05em
-                    .skillsRating
-                        li
-                            display: flex
-                            justify-content: space-between
+                        padding: 0 25vh 1em 25vh
+                        position: absolute
+                        top: 55%
+
+                .introBody
+                    padding-top: 3.5em
+                    display: grid
+                    grid-template-columns: 1fr 1fr
+                    .introLeft
+                        padding-right: 1em
+                        width: 90%
+                    .introRight
+                        display: grid
+                        grid-template-rows: auto auto
+                        .introDetails
+                            display: grid
+                            grid-template-rows: auto auto auto
+                            .lineDetails
+                                display: flex
+                                .lineBg
+                                    position: relative
+                                    background-color: #DB6B5C
+                                    border-radius: 50%
+                                    height: 5em
+                                    width: 6em
+                                    padding: 1em
+                                    p
+                                        position: absolute
+                                        top: -10%
+                                        right: 20%
+                                        font-family: Knewave
+                                        font-size: 3em
+                                p
+                                    font-family: Urbanist
+                                    font-size: 1.5em
+                                    padding-left: 1em
+                        .introSkills
+                            width: 40%
+                            float: left
+                            h1
+                                color: #faad4e
+                                font-size: 3.5em
+                                line-height: 1
+                                letter-spacing: .05em
+                            .skillsRating
+                                li
+                                    display: flex
+                                    justify-content: space-between

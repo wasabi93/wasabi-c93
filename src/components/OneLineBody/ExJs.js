@@ -4,7 +4,7 @@ import home from "../../styles/home.module.sass";
 import { useDebounce } from "../../utils/useDebounce";
 import { CssEditor, HtmlEditor, JavascriptEditor } from "../Codepen/Editors";
 
-export default function ExJs({ ex,details }) {
+export default function ExJs({ ex }) {
   const [buttonIntro, setButtonIntro] = useState(true)
   const [button1, setButton1] = useState(false);
   const [button2, setButton2] = useState(false);
@@ -65,8 +65,8 @@ export default function ExJs({ ex,details }) {
       <div className={home.sectionContainer}>
         <div className={home.metaArea}>
           <h2 className={home.sectionTittle}>
-            {details.tittle}
-            <code>{details.introduce}</code>
+            {ex.tittle}
+            <code>{ex.introduce}</code>
           </h2>
         </div>
         <div className={home.exSection}>
@@ -107,7 +107,7 @@ export default function ExJs({ ex,details }) {
               </button>
             </div>
             <div className={buttonIntro ? home.boxCode : home.none}>
-              <textarea value={details.intro}></textarea>
+              <textarea value={ex.intro}></textarea>
             </div>
             <div className={button1 ? home.boxCode : home.none}>
               <HtmlEditor value={htmlValue} onChange={setHtmlValue} />

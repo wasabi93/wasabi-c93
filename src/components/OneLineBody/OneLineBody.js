@@ -57,6 +57,8 @@ export default function OneLineBody() {
       padding: 5em;
       margin: 0.5em;
       border-radius: 10%;
+      display: grid;
+      place-items: center;
     }
     `,
     js: ``,
