@@ -62,7 +62,7 @@ export default function About() {
                     <p>
                       Reaches the advanced (very hard to expert) level in{" "}
                       <a href="https://edabit.com/challenges">edabit.com</a>{" "}
-                      within a year.
+                      within 6 months.
                     </p>
                   </div>
                   <div className={home.lineDetails}>
