@@ -22,9 +22,9 @@ export default function About() {
         <article className={home.nameImg}>
           <section className={home.name}>
             <div className={home.borderName}>
-              <h2>hello, it's</h2>
-              <h1>LE DUC THO</h1>
-              <div className={home.div1}>
+              <h2 data-aos="fade-right">hello, it's</h2>
+              <h1 data-aos="fade-left">LE DUC THO</h1>
+              <div className={home.div1} data-aos="fade-up">
                 <p className={home.p1}>"</p>
                 <p className={home.p2}>frontend developer</p>
               </div>
