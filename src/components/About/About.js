@@ -103,14 +103,14 @@ export default function About() {
                       </li>
                       <li>
                         <div className={home.skill2}>
-                          <span className={home.skillsArea}>Css, Js</span>
+                          <span className={home.skillsArea}>Css, Sass, Material-UI, Js</span>
                           <span className={home.percent}>70%</span>
                         </div>
                       </li>
                       <li>
                         <div className={home.skill3}>
                           <span className={home.skillsArea}>
-                            ReactJS, Material-UI, Sass, Python
+                            ReactJS, Python
                           </span>
                           <span className={home.percent}>60%</span>
                         </div>
@@ -126,9 +126,9 @@ export default function About() {
                       <li>
                         <div className={home.skill5}>
                           <span className={home.skillsArea}>
-                            MongoDB, ExpressJS
+                            Mongo, Express
                           </span>
-                          <span className={home.percent}>20%</span>
+                          <span className={home.percent}>30%</span>
                         </div>
                       </li>
                     </ul>
