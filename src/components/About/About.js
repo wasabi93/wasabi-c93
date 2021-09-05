@@ -112,7 +112,7 @@ export default function About() {
                       <li>
                         <div className={home.skill3}>
                           <span className={home.skillsArea}>
-                            ReactJS, Python
+                            ReactJS, NextJS
                           </span>
                           <span className={home.percent}>60%</span>
                         </div>
@@ -120,7 +120,7 @@ export default function About() {
                       <li>
                         <div className={home.skill4}>
                           <span className={home.skillsArea}>
-                            API, Axios, NextJS
+                            API, Axios, Python
                           </span>
                           <span className={home.percent}>50%</span>
                         </div>
