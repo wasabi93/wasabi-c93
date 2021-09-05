@@ -63,60 +63,59 @@ export default function ExPy({ ex, details }) {
   return (
     <section>
       <div className={home.sectionContainer}>
-        <div className={home.metaArea}>
-          <h2 className={home.sectionTittle}>
-            {details.tittle}
-            <code>{details.introduce}</code>
-          </h2>
-        </div>
-        <div className={home.exSection}>
-          <div className={home.exArea}>
-            <div className={home.exContainer}>
-              <iframe
-                srcDoc={outputValue}
-                style={{ height: "100%", width: "100%" }}
-                sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
-              />
-            </div>
+        <div className={home.codeArea}>
+          <div className={home.tabArea}>
+            <button
+              onClick={handleButtonIntro}
+              className={buttonIntro ? home.btnClicked : "null"}
+            >
+              intro
+            </button>
+            <button
+              onClick={handleButton1}
+              className={button1 ? home.btnClicked : "null"}
+            >
+              HTML
+            </button>
+            <button
+              onClick={handleButton2}
+              className={button2 ? home.btnClicked : "null"}
+            >
+              CSS
+            </button>
+            <button
+              onClick={handleButton3}
+              className={button3 ? home.btnClicked : "null"}
+            >
+              Python
+            </button>
           </div>
-          <div className={home.codeArea}>
-            <div className={home.tabArea}>
-              <button
-                onClick={handleButtonIntro}
-                className={buttonIntro ? home.btnClicked : "null"}
-              >
-                intro
-              </button>
-              <button
-                onClick={handleButton1}
-                className={button1 ? home.btnClicked : "null"}
-              >
-                HTML
-              </button>
-              <button
-                onClick={handleButton2}
-                className={button2 ? home.btnClicked : "null"}
-              >
-                CSS
-              </button>
-              <button
-                onClick={handleButton3}
-                className={button3 ? home.btnClicked : "null"}
-              >
-                Python
-              </button>
-            </div>
-            <div className={buttonIntro ? home.boxCode : home.none}>
-              <textarea value={details.intro}></textarea>
-            </div>
-            <div className={button1 ? home.boxCode : home.none}>
-              <HtmlEditor value={htmlValue} onChange={setHtmlValue} />
-            </div>
-            <div className={button2 ? home.boxCode : home.none}>
-              <CssEditor value={cssValue} onChange={setCssValue} />
-            </div>
-            <div className={button3 ? home.boxCode : home.none}>
-              <PythonEditor value={pyValue} onChange={setPyValue} />
+          <div className={buttonIntro ? home.boxCode : home.none}>
+            <textarea value={details.intro}></textarea>
+          </div>
+          <div className={button1 ? home.boxCode : home.none}>
+            <HtmlEditor value={htmlValue} onChange={setHtmlValue} />
+          </div>
+          <div className={button2 ? home.boxCode : home.none}>
+            <CssEditor value={cssValue} onChange={setCssValue} />
+          </div>
+          <div className={button3 ? home.boxCode : home.none}>
+            <PythonEditor value={pyValue} onChange={setPyValue} />
+          </div>
+        </div>
+        <div className={home.coverMeta}>
+          <div className={home.metaArea}>
+            <h2 className={home.sectionTittle}>{details.tittle}</h2>
+          </div>
+          <div className={home.exSection}>
+            <div className={home.exArea}>
+              <div className={home.exContainer}>
+                <iframe
+                  srcDoc={outputValue}
+                  style={{ height: "100%", width: "100%" }}
+                  sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+                />
+              </div>
             </div>
           </div>
         </div>

@@ -8,7 +8,8 @@ export default function PythonEx() {
         html: ''
     }
     const details = {
-        tittle: 'a'
+        tittle: 'aaaaaa',
+        introduce: 'bbbbbb'
     }
     return (
         <main>

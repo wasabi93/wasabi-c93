@@ -4,7 +4,7 @@ import home from "../../../styles/home.module.sass";
 import { useDebounce } from "../../../utils/useDebounce";
 import { CssEditor, HtmlEditor, JavascriptEditor } from "../../Codepen/Editors";
 
-export default function Ex1({ex}) {
+export default function Ex1({ ex }) {
   const [button1, setButton1] = useState(true);
   const [button2, setButton2] = useState(false);
   const [button3, setButton3] = useState(false);
@@ -57,17 +57,6 @@ export default function Ex1({ex}) {
             08. Line Up
             <code>justify-content: space-between</code>
           </h2>
-          <div className={home.supportArea}>
-            <span>Current Browser Support</span>
-            <ul className={home.taglist}>
-              <li className={home.green}>Edge</li>
-              <li className={home.green}>Firefox</li>
-              <li className={home.green}>Chrome</li>
-              <li className={home.green}>Safari</li>
-            </ul>
-          </div>
-        </div>
-        <div className={home.exSection}>
           <div className={home.exArea}>
             <div className={home.exContainer}>
               <iframe
@@ -76,6 +65,17 @@ export default function Ex1({ex}) {
                 sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
               />
             </div>
+          </div>
+        </div>
+        <div className={home.exSection}>
+          <div className={home.supportArea}>
+            <span>Current Browser Support</span>
+            <ul className={home.taglist}>
+              <li className={home.green}>Edge</li>
+              <li className={home.green}>Firefox</li>
+              <li className={home.green}>Chrome</li>
+              <li className={home.green}>Safari</li>
+            </ul>
           </div>
           <div className={home.codeArea}>
             <div className={home.tabArea}>

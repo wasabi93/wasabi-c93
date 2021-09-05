@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 import home from '../styles/home.module.sass'
 
 import Header from '../components/Header/Header'

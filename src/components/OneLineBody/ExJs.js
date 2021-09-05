@@ -5,7 +5,7 @@ import { useDebounce } from "../../utils/useDebounce";
 import { CssEditor, HtmlEditor, JavascriptEditor } from "../Codepen/Editors";
 
 export default function ExJs({ ex }) {
-  const [buttonIntro, setButtonIntro] = useState(true)
+  const [buttonIntro, setButtonIntro] = useState(true);
   const [button1, setButton1] = useState(false);
   const [button2, setButton2] = useState(false);
   const [button3, setButton3] = useState(false);
@@ -49,11 +49,11 @@ export default function ExJs({ ex }) {
 
   const handleButtonIntro = () => {
     setButtonIntro(true);
-    setButton1(false)
+    setButton1(false);
     setButton2(false);
     setButton3(false);
-  }
-  
+  };
+
   const handleButton1 = () => {
     setButtonIntro(false);
     setButton1(true);
@@ -77,61 +77,60 @@ export default function ExJs({ ex }) {
   return (
     <section>
       <div className={home.sectionContainer}>
-        <div className={home.metaArea}>
-          <h2 className={home.sectionTittle}>
-            {ex.tittle}
-            <code>{ex.introduce}</code>
-          </h2>
-        </div>
-        <div className={home.exSection}>
-          <div className={home.exArea}>
-            <div className={home.exContainer}>
-              <iframe
-                srcDoc={outputValue}
-                style={{ height: "100%", width: "100%" }}
-                sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
-              />
-            </div>
+        <div className={home.codeArea}>
+          <div className={home.tabArea}>
+            <button
+              onClick={handleButtonIntro}
+              className={buttonIntro ? home.btnClicked : "null"}
+            >
+              intro
+            </button>
+            <button
+              onClick={handleButton1}
+              className={button1 ? home.btnClicked : "null"}
+            >
+              HTML
+            </button>
+            <button
+              onClick={handleButton2}
+              className={button2 ? home.btnClicked : "null"}
+            >
+              CSS
+            </button>
+            <button
+              onClick={handleButton3}
+              className={button3 ? home.btnClicked : "null"}
+            >
+              JS
+            </button>
           </div>
-          <div className={home.codeArea}>
-            <div className={home.tabArea}>
-              <button
-                onClick={handleButtonIntro}
-                className={buttonIntro ? home.btnClicked : 'null'}
-              >
-                intro
-              </button>
-              <button
-                onClick={handleButton1}
-                className={button1 ? home.btnClicked : "null"}
-              >
-                HTML
-              </button>
-              <button
-                onClick={handleButton2}
-                className={button2 ? home.btnClicked : "null"}
-              >
-                CSS
-              </button>
-              <button
-                onClick={handleButton3}
-                className={button3 ? home.btnClicked : "null"}
-              >
-                JS
-              </button>
+          <div className={buttonIntro ? home.boxCode : home.none}>
+            <textarea value={ex.intro}></textarea>
+          </div>
+          <div className={button1 ? home.boxCode : home.none}>
+            <HtmlEditor value={htmlValue} onChange={setHtmlValue} />
+          </div>
+          <div className={button2 ? home.boxCode : home.none}>
+            <CssEditor value={cssValue} onChange={setCssValue} />
+          </div>
+          <div className={button3 ? home.boxCode : home.none}>
+            <JavascriptEditor value={jsValue} onChange={setJsValue} />
+          </div>
+        </div>
+        <div className={home.coverMeta}>
+          <div className={home.metaArea}>
+            <h2 className={home.sectionTittle}>{ex.tittle}</h2>
+          </div>
+          <div className={home.exSection}>
+            <div className={home.exArea}>
+              <div className={home.exContainer}>
+                <iframe
+                  srcDoc={outputValue}
+                  style={{ height: "100%", width: "100%" }}
+                  sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+                />
+              </div>
             </div>
-            <div className={buttonIntro ? home.boxCode : home.none}>
-              <textarea value={ex.intro}></textarea>
-            </div>
-            <div className={button1 ? home.boxCode : home.none}>
-              <HtmlEditor value={htmlValue} onChange={setHtmlValue} />
-            </div>
-            <div className={button2 ? home.boxCode : home.none}>
-              <CssEditor value={cssValue} onChange={setCssValue} />    
-            </div>       
-            <div className={button3 ? home.boxCode : home.none}>
-              <JavascriptEditor value={jsValue} onChange={setJsValue} /> 
-            </div>          
           </div>
         </div>
       </div>
