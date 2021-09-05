@@ -1,39 +1,105 @@
+@mixin prefix($property, $value, $prefixes)
+  @each $prefix in $prefixes
+    -#{$prefix}-#{$property}: $value
+
+  #{$property}: $value
 main
     grid-column: 1/5
     .about
-        color: white
-        min-height: 100vh
         display: grid
-        grid-template-rows: auto auto auto
-        background-color: #204056
-        section
+        grid-template-rows: auto auto
+        .nameImg
+            display: grid
+            grid-template-rows: 1fr auto
+            background-color: #3E3E3E
+            color: white
             padding: 1em
-        .name
-            h2
-                color: #f58a07
-                font-size: 3em
-                line-height: 1.5
-                letter-spacing: .05em
-                text-align: center
-            h1
-                color: white
-                font-size: 3em
-                line-height: 2
-                letter-spacing: .1em
-                font-family: Oswald,sans-serif
-                text-align: center
-            p
-                font-size: 2em
-                line-height: 1
-                text-align: center
+            .name
+                display: grid
+                place-items: center
+                .borderName
+                    h2
+                        color: #FFFFF
+                        font-size: 12vh
+                        font-family: Knewave
+                        text-align: left
+                    h1
+                        color: #9AB460
+                        font-size: 14vh
+                        font-family: Righteous
+                        text-align: left
+                        line-height: 0.7
+                    .div1
+                        width: 100%
+                        display: flex
+                        justify-content: flex-end
+                        .p1
+                            font-family: Knewave
+                            font-size: 14vh
+                        .p2
+                            font-family: Urbanist
+                            font-size: 6vh
+                            padding-left: 4vh
+            .Image
+                padding-bottom: 1em
         .introduce
-            padding: 1em
-            a
-                color: yellow
-            h1
-                color: #faad4e
-                font-size: 2em
-                line-height: 1
-                letter-spacing: .05em
-            p
-                font-size: 1em
+            background-color: white
+            color: #3E3E3E
+            padding: 5%
+            .introContainer
+                .introHeader
+                    div
+                        display: grid
+                        grid-template-columns: minmax(150px, 40%) 1fr
+                        position: relative
+                        .introHeaderImage
+                            height: 20vh
+                            posistion: absolute
+                            left: 65%
+                            top: -60%
+                        h1
+                            font-family: Knewave
+                            font-size: 3em
+                    p
+                        font-family: Urbanist
+                        text-align: center
+                        font-style: italic
+                        font-size: 1.5em
+                .introBody
+                    padding: 1em
+                    .introLeft
+                        display: none
+                    .introRight
+                        .introDetails
+                            .lineDetails
+                                display: flex
+                                padding: 1em 0
+                                .lineBg
+                                    position: relative
+                                    background-color: #DB6B5C
+                                    border-radius: 50%
+                                    height: 5em
+                                    width: 6em
+                                    padding: 1em
+                                    p
+                                        position: absolute
+                                        top: -10%
+                                        right: 20%
+                                        font-family: Knewave
+                                        font-size: 3em
+                                p
+                                    font-family: Urbanist
+                                    font-size: 1.5em
+                                    padding-left: 1em
+                        .introSkills
+                            width: 40%
+                            float: left
+                            h1
+                                color: #faad4e
+                                font-size: 3.5em
+                                line-height: 1
+                                letter-spacing: .05em
+                            .skillsRating
+                                li
+                                    display: flex
+                                    justify-content: space-between

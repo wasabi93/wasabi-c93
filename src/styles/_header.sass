@@ -42,16 +42,25 @@
     header
         padding: 1vw 10vw
         grid-column: 1/13
-        font-color: #3F3F3F
+        color: #3F3F3F
         background-color: #9AB460
         display: flex
         justify-content: space-between
-        .logoFont
-            font-family: 'Kanit', sans-serif
+        a
+            &:visited
+                    color: #3F3F3F
+            .logoFont
+                font-family: 'Kanit', sans-serif
+                
         .buttonMenu
             display: none
-        ul li
-            display: inline
-            padding: 1vw 3vw
-            font-family: 'Lato', sans-serif
-            font-weight: 400
+        ul 
+            li
+                display: inline
+                padding: 1vw 3vw
+                font-family: 'Lato', sans-serif
+                font-weight: 400
+                a
+                    &:visited
+                        color: #3F3F3F
+                    

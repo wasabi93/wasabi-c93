@@ -1,5 +1,7 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Image from "next/image";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import wasabi1 from "../../../public/wasabi1.svg";
 import wasabi2 from "../../../public/wasabi2.svg";
@@ -8,6 +10,12 @@ import redDot from "../../../public/redDot.svg";
 import home from "../../styles/home.module.sass";
 
 export default function About() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000
+    });
+    AOS.refresh();
+  });
   return (
     <main>
       <div className={home.about}>
@@ -18,7 +26,7 @@ export default function About() {
               <h1>LE DUC THO</h1>
               <div className={home.div1}>
                 <p className={home.p1}>"</p>
-                <p className={home.p2}>frontend Developer</p>
+                <p className={home.p2}>frontend developer</p>
               </div>
             </div>
           </section>
@@ -31,15 +39,9 @@ export default function About() {
             <section className={home.introHeader}>
               <div>
                 <div className={home.introHeaderImage}>
-                  <Image
-                    src={redDot}
-                    alt=""
-                    layout="responsive"
-                  />
+                  <Image src={redDot} alt="" layout="responsive" />
                 </div>
-                <h1>
-                  About me
-                </h1>
+                <h1>ABOUT ME</h1>
               </div>
               <p>
                 A 28 years old self-taught frontend developer who is
@@ -88,30 +90,46 @@ export default function About() {
                     </p>
                   </div>
                 </div>
-                <div className={home.introSkills}>
-                  <h1>Skills</h1>
+                <div className={home.introSkills} data-aos='fade-up'>
+                  <h1>SKILLS</h1>
                   <br />
                   <div className={home.skillsRating}>
                     <ul>
                       <li>
-                        <div>HTML5</div>
-                        <div></div>
+                        <div className={home.skill1}>
+                          <span className={home.skillsArea}>HTML5</span>
+                          <span className={home.percent}>90%</span>
+                        </div>
                       </li>
                       <li>
-                        <div>Css, Js</div>
-                        <div></div>
+                        <div className={home.skill2}>
+                          <span className={home.skillsArea}>Css, Js</span>
+                          <span className={home.percent}>70%</span>
+                        </div>
                       </li>
                       <li>
-                        <div>ReactJS, Material-UI, sass</div>
-                        <div></div>
+                        <div className={home.skill3}>
+                          <span className={home.skillsArea}>
+                            ReactJS, Material-UI, Sass, Python
+                          </span>
+                          <span className={home.percent}>60%</span>
+                        </div>
                       </li>
                       <li>
-                        <div>API, Axios, NextJS, Python</div>
-                        <div></div>
+                        <div className={home.skill4}>
+                          <span className={home.skillsArea}>
+                            API, Axios, NextJS
+                          </span>
+                          <span className={home.percent}>50%</span>
+                        </div>
                       </li>
                       <li>
-                        <div>MongoDB, ExpressJS</div>
-                        <div></div>
+                        <div className={home.skill5}>
+                          <span className={home.skillsArea}>
+                            MongoDB, ExpressJS
+                          </span>
+                          <span className={home.percent}>20%</span>
+                        </div>
                       </li>
                     </ul>
                   </div>
