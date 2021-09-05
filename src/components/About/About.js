@@ -51,7 +51,9 @@ export default function About() {
             </section>
             <section className={home.introBody}>
               <div className={home.introLeft}>
-                <Image src={wasabi2} alt="" layout="responsive" />
+                <div className={home.imageCover}>
+                  <Image src={wasabi2} alt="" layout="responsive" />
+                </div>
               </div>
               <div className={home.introRight}>
                 <div className={home.introDetails}>

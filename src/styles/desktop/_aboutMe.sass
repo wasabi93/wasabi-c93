@@ -80,8 +80,9 @@ main
                     .introLeft
                         padding-right: 1em
                         width: 90%
-                        background-color: #DB6B5C
-                        border-radius: 25%
+                        .imageCover
+                            background-color: #DB6B5C
+                            border-radius: 25%
                     .introRight
                         display: grid
                         grid-template-rows: auto auto
@@ -89,14 +90,14 @@ main
                             display: grid
                             grid-template-rows: auto auto auto
                             .lineDetails
-                                display: flex
+                                display: grid
+                                grid-template-columns: auto 1fr
                                 .lineBg
                                     position: relative
                                     background-color: #DB6B5C
                                     border-radius: 50%
-                                    height: 5em
-                                    width: 6em
-                                    padding: 1em
+                                    height: 3em
+                                    width: 4em
                                     p
                                         position: absolute
                                         top: -10%
@@ -130,6 +131,7 @@ main
                                         background-color: #b4aeae
                                         margin: 1em auto
                                         position: relative
+                                        font-family: urbanist
                                         .skill1
                                             width: 90%
                                             height: 30px
