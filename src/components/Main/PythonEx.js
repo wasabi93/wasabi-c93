@@ -14,6 +14,7 @@ export default function PythonEx() {
         <main>
             <div className={home.exampleContainer}>
                 <h1 className={home.heading}>Python</h1>
+                <p>Trying to display python output in HTML</p>
                 <ExPy ex={js1} details={details}/>
             </div>
         </main>
