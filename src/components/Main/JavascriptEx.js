@@ -216,9 +216,9 @@ isConsecutive("999897959493") ➞ false
       js: `
 function isConsecutive(s) {
   for (let i = 1; i <= s.length/2; i++) {
-    const reg = new RegExp(.{\${i}}","g")
+    const reg = new RegExp(\`.{\${i}}\`,"g")
     let x = s.match(reg).map(x => parseInt(x))
-    if (x[0] !== x[x.length-1] && Math.abs(x[0]-x[x.length-1]) === x.length-1) {
+    if (x[0] !== x[x.length-1] && Math.abs(x[0]-x[x.length-1]) === x.length-1 && x.reduce((acc,cur) => acc+cur,0)/x.length === (x[0]+x[x.length-1])/2) {
       if (x.sort().join('') === s || x.sort((a,b) => b-a).join('') === s) {
           return true
       }
