@@ -29,9 +29,25 @@ console.log(cuttingGrass([3, 4, 4, 4], 1, 1, 1))
     },
     {
       id: '2',
-      tittle: "Simplify List",
-      introduce: "Reduce duplicate items and add count property",
-      intro: "",
+      tittle: "Simplify an Object by Two Properties",
+      introduce: "Arrays, loops, objects, sorting",
+      intro: `
+You were tasked with making a list of every makeup item your local pharmacy had in stock. You created a very long array of each item, with each element having both a name and brand property. Now you're looking to simplify the list by combining duplicate items, and adding a count property to everything.
+
+Example
+simplifyList([
+  { brand: "NARS", name: "Cosmetics Voyageur Pallete" },
+  { brand: "NARS", name: "Cosmetics Voyageur Pallete" },
+  { brand: "Urban Decay", name: "Naked Honey Pallete" },
+  { brand: "Stila", name: "Stay All Day Liquid Lipstick" },
+  { brand: "Stila", name: "Stay All Day Liquid Lipstick" },
+  { brand: "Stila", name: "Stay All Day Liquid Lipstick" }
+]) ➞ [
+  { brand: "NARS", name: "Cosmetics Voyageur Pallete", count: 2 },
+  { brand: "Urban Decay", name: "Naked Honey Pallete", count: 1 },
+  { brand: "Stila", name: "Stay All Day Liquid Lipstick", count: 3 }
+]      
+      `,
       html: ``,
       css: ``,
       js: `
@@ -93,8 +109,10 @@ console.log(simplifyList([
     {
       id: '3',
       tittle: "Strong password",
-      introduce: "Create a function that determines the minimum number of characters needed to make a strong password.",
+      introduce: "Strings, validation",
       intro: `
+Create a function that determines the minimum number of characters needed to make a strong password.
+
 A password is considered strong if it satisfies the following criteria:
 
 Its length is at least 6.
@@ -102,6 +120,12 @@ It contains at least one digit.
 It contains at least one lowercase English character.
 It contains at least one uppercase English character.
 It contains at least one special character: !@#$%^&*()-+
+Types of characters in a form you can paste into your solution:
+
+const numbers = "0123456789"
+const lower = "abcdefghijklmnopqrstuvwxyz"
+const upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+const special = "!@#$%^&*()-+"
       `,
       html: ``,
       css: ``,
@@ -161,12 +185,50 @@ console.log(strongPassword("[?"))
     },
     {
       id: '4',
-      tittle: "",
-      introduce: "",
-      intro: "",
+      tittle: "Consecutive Number Series",
+      introduce: "Arrays, loops, numbers, sorting, validation",
+      intro: `
+Write a function that will return true if a given string (divided and grouped into a size) will contain a set of consecutive numbers (regardless of orientation: whether ascending or descending), otherwise, return false.
+
+Examples
+isConsecutive("121314151617") ➞ true
+// Contains a set of consecutive ascending numbers
+// if grouped into 2's : 12, 13, 14, 15, 16, 17
+
+isConsecutive("123124125") ➞ true
+// Contains a set of consecutive ascending numbers
+// if grouped into 3's : 123, 124, 125
+
+isConsecutive("32332432536") ➞ false
+// Regardless of the grouping size, the numbers can't be consecutive.
+
+isConsecutive("326325324323") ➞ true
+// Contains a set of consecutive descending numbers
+// if grouped into 3's : 326, 325, 324, 323
+
+isConsecutive("667666") ➞ true
+// Consecutive descending numbers: 667 and 666.
+
+isConsecutive("999897959493") ➞ false
+      `,
       html: ``,
       css: ``,
-      js: ``,
+      js: `
+function isConsecutive(s) {
+  for (let i = 1; i <= s.length/2; i++) {
+    const reg = new RegExp(.{\${i}}","g")
+    let x = s.match(reg).map(x => parseInt(x))
+    if (x[0] !== x[x.length-1] && Math.abs(x[0]-x[x.length-1]) === x.length-1) {
+      if (x.sort().join('') === s || x.sort((a,b) => b-a).join('') === s) {
+          return true
+      }
+    }
+  }
+  return false
+}
+
+console.log(isConsecutive('999897959493'))
+      `,
     },
   ];
   return (

@@ -120,6 +120,7 @@ export default function ExJs({ ex }) {
         <div className={home.coverMeta}>
           <div className={home.metaArea}>
             <h2 className={home.sectionTittle}>{ex.tittle}</h2>
+            <p className={home.tagIntro}>{ex.introduce}</p>
           </div>
           <div className={home.exSection}>
             <div className={home.exArea}>
